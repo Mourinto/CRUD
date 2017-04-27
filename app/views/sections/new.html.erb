@@ -1,0 +1,15 @@
+<%= link_to('<< Back to List', sections_path, class: 'back-link') %>
+
+<div class='sections new'>
+  <h2>Create section</h2>
+
+  <%= form_for(@section) do |f| %>
+
+      <%= render(partial: 'form', locals: {f: f}) %>
+
+      <div class='form-buttons'>
+        <%= f.submit('Create section') %>
+      </div>
+
+  <% end %>
+</div>
